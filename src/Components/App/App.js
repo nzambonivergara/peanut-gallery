@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import movieData from './sample-data';
+import MoviesContainer from '../MoviesContainer/MoviesContainer';
+import movieData from '../../sample-data';
 import './App.css';
 
 class App extends Component {
@@ -15,6 +15,7 @@ class App extends Component {
     return (
       <main className="App">
         <h1>The Peanut Gallery</h1>
+        <MoviesContainer movies={this.state.movies} />
       </main>
     );
   }

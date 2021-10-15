@@ -17,10 +17,10 @@ const MoviesContainer = ({ movies }) => {
 
   return (
     <section>
-      <div>
+      <div className="banner-container">
         <img
           className="banner"
-          src="https://image.tmdb.org/t/p/original//zGVbrulkupqpbwgiNedkJPyQum4.jpg"
+          src='https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg'
         />
       </div>
       <div className="movies-container">{movieCards}</div>;

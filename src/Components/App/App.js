@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../Header/Header'
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import movieData from '../../sample-data';
 import './App.css';
@@ -14,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <h1>The Peanut Gallery</h1>
+        <Header />
         <MoviesContainer movies={this.state.movies} />
       </main>
     );

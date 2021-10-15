@@ -1,12 +1,25 @@
 .movies-container {
   padding: 20px;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(4, 0.25fr);
-  grid-gap: 30px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
+
+.banner-container {
+  width: 100%;
+  height: 500px;
+  background: url(https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .banner {
-  height: 600px;
+  width: 100%;
+  height: 100%;
+  /* height: 600px;
   width: 75%;
-  border-radius: 0%;
+  border-radius: 0%; */
 }

@@ -18,7 +18,10 @@ const MoviesContainer = ({ movies }) => {
   return (
     <section>
       <div>
-        <img src="https://image.tmdb.org/t/p/original//6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg" />
+        <img
+          className="banner"
+          src="https://image.tmdb.org/t/p/original//zGVbrulkupqpbwgiNedkJPyQum4.jpg"
+        />
       </div>
       <div className="movies-container">{movieCards}</div>;
     </section>

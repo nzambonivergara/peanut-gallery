@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Header from '../Header/Header'
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import SingleMovie from '../SingleMovie/SingleMovie';
 import movieData from '../../sample-data';
@@ -21,7 +22,7 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <h1>The Peanut Gallery</h1>
+        <Header />
         {this.state.singleMovie ? <SingleMovie movie={this.state.singleMovie} /> :
           <MoviesContainer movies={this.state.movies} selectMovie={this.selectMovie}/>}
       </main>

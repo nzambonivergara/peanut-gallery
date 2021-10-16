@@ -6,7 +6,7 @@ const MovieCard = ({ poster, title, ratings, id, selectMovie }) => {
     <article id={id} onClick={() => selectMovie(id)}>
       <img src={poster} alt={`${title} poster`} />
       <h3 className="card-title">{title}</h3>
-      <p className="card-rating">Rating: {ratings}</p>
+      <p className="card-rating">Rating: {Math.round(ratings * 10) / 10}</p>
     </article>
   );
 };

@@ -1,30 +1,46 @@
 import React, { Component } from 'react';
-import Header from '../Header/Header'
+import Header from '../Header/Header';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import SingleMovie from '../SingleMovie/SingleMovie';
-import movieData from '../../sample-data';
+import { fetchAllMoviesData, fetchSingleMovieData } from '../../apiCalls';
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      movies: movieData.movies,
-      singleMovie: null
+      movies: [],
+      error: '',
+      singleMovie: null,
     };
   }
 
+  componentDidMount = () => {
+    fetchAllMoviesData()
+      .then((movieData) => this.setState({ movies: movieData.movies }))
+      .catch((error) => this.setState({ error: error.message }));
+  };
+
   selectMovie = (id) => {
-    const selectedMovie = this.state.movies.find(movie => movie.id === id)
-    this.setState({ singleMovie: selectedMovie })
-  }
+    fetchSingleMovieData(id)
+      .then((singleMovieData) =>
+        this.setState({ singleMovie: singleMovieData.movie })
+      )
+      .catch((error) => this.setState({ error: error.message }));
+  };
 
   render() {
     return (
       <main className="App">
         <Header />
-        {this.state.singleMovie ? <SingleMovie movie={this.state.singleMovie} /> :
-          <MoviesContainer movies={this.state.movies} selectMovie={this.selectMovie}/>}
+        {this.state.singleMovie ? (
+          <SingleMovie movie={this.state.singleMovie} />
+        ) : (
+          <MoviesContainer
+            movies={this.state.movies}
+            selectMovie={this.selectMovie}
+          />
+        )}
       </main>
     );
   }

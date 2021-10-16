@@ -1,7 +1,7 @@
 .movies-container {
   padding: 20px;
   display: flex;
-  gap: 30px;
+  gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1200px;
@@ -11,9 +11,9 @@
 .banner-container {
   width: 100%;
   height: 500px;
-  background: url(https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background: url("https://image.tmdb.org/t/p/original//zzWGRw277MNoCs3zhyG3YmYQsXv.jpg"); */
+  /* background-size: cover; */
+  /* background-repeat: no-repeat; */
 }
 
 .banner {
@@ -22,4 +22,13 @@
   /* height: 600px;
   width: 75%;
   border-radius: 0%; */
+}
+
+.overlay {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: 72px;
+  right: 0px;
+  background: radial-gradient(rgba(0, 0, 0, 0.3071) 10%, rgb(0 0 0 / 90%) 90%);
 }

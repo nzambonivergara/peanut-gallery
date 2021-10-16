@@ -23,8 +23,6 @@ class App extends Component {
     return (
       <main className="App">
         <Header />
-        <MoviesContainer movies={this.state.movies} />
-        <h1>The Peanut Gallery</h1>
         {this.state.singleMovie ? <SingleMovie movie={this.state.singleMovie} /> :
           <MoviesContainer movies={this.state.movies} selectMovie={this.selectMovie}/>}
       </main>

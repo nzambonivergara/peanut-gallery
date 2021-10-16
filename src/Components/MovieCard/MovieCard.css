@@ -5,6 +5,12 @@ article {
   background-color: #313131;
   color: white;
   width: 250px;
+  text-align: center;
+  font-family: 'Josefin Sans';
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 article:hover {
@@ -16,4 +22,15 @@ img {
   border-top-right-radius: 3%; */
   width: 100%;
   object-fit: cover;
+}
+
+.card-title {
+  font-size: 24px;
+  margin: 10px;
+}
+
+.card-rating {
+  font-size: 12px;
+  margin: 10px;
+  text-transform: uppercase;
 }

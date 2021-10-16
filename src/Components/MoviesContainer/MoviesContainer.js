@@ -19,9 +19,10 @@ const MoviesContainer = ({ movies, selectMovie }) => {
   return (
     <section>
       <div className="banner-container">
+        <div className="overlay"></div>
         <img
           className="banner"
-          src='https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg'
+          src="https://image.tmdb.org/t/p/original//zzWGRw277MNoCs3zhyG3YmYQsXv.jpg"
         />
       </div>
       <div className="movies-container">{movieCards}</div>;

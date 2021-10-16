@@ -6,7 +6,7 @@ const MovieCard = ({ poster, title, ratings, id }) => {
     <article id={id}>
       <img src={poster} alt={`${title} poster`} />
       <h3>{title}</h3>
-      <p>Rating: {ratings}</p>
+      <p>Rating: {Math.round(ratings * 10) / 10}</p>
     </article>
   );
 };

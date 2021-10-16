@@ -1,3 +1,23 @@
-.single-movie-container {
+h2 {
   color: white;
+}
+.single-movie-container {
+  display: flex;
+  color: #445566;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+movie-datails {
+  display: flex;
+}
+
+.single-movie-poster {
+  border-radius: 0%;
+  width: 300px;
+  height: 475px;
+}
+
+.movie-details {
+  margin-left: 50px;
 }

@@ -6,7 +6,7 @@ const movieData = {
         'https://image.tmdb.org/t/p/original//6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg',
       backdrop_path:
         'https://image.tmdb.org/t/p/original//pq0JSpwyT2URytdFG0euztQPAyR.jpg',
-      title: 'Money Plane',
+      title: 'Raquel',
       average_rating: 6.666666666666667,
       release_date: '2020-09-29',
     },
@@ -16,7 +16,7 @@ const movieData = {
         'https://image.tmdb.org/t/p/original//aKx1ARwG55zZ0GpRvU2WrGrCG9o.jpg',
       backdrop_path:
         'https://image.tmdb.org/t/p/original//zzWGRw277MNoCs3zhyG3YmYQsXv.jpg',
-      title: 'Mulan',
+      title: 'Natalia',
       average_rating: 4.909090909090909,
       release_date: '2020-09-04',
     },

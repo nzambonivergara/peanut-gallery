@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
-// import movieData from '../../sample-data';
 import SingleMovie from '../SingleMovie/SingleMovie';
+import { fetchAllMoviesData, fetchSingleMovieData } from '../../apiCalls';
 import './App.css';
 
 class App extends Component {
@@ -12,20 +12,21 @@ class App extends Component {
       movies: [],
       error: '',
       singleMovie: null,
-      // movies: movieData.movies,
     };
   }
 
   componentDidMount = () => {
-    fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
-      .then((response) => response.json())
+    fetchAllMoviesData()
       .then((movieData) => this.setState({ movies: movieData.movies }))
       .catch((error) => this.setState({ error: error.message }));
   };
 
   selectMovie = (id) => {
-    const selectedMovie = this.state.movies.find((movie) => movie.id === id);
-    this.setState({ singleMovie: selectedMovie });
+    fetchSingleMovieData(id)
+      .then((singleMovieData) =>
+        this.setState({ singleMovie: singleMovieData.movie })
+      )
+      .catch((error) => this.setState({ error: error.message }));
   };
 
   render() {

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from '../Header/Header';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import SingleMovie from '../SingleMovie/SingleMovie';
+import Error from '../Error/Error'
 import { fetchAllMoviesData, fetchSingleMovieData } from '../../apiCalls';
 import './App.css';
 
@@ -37,6 +38,10 @@ class App extends Component {
     return movies[Math.floor(Math.random() * movies.length)].backdrop_path
   }
 
+  returnHome = () => {
+    this.setState({ singleMovie: null })
+  }
+
   render() {
     return (
       <main className="App">
@@ -57,6 +62,7 @@ class App extends Component {
               selectMovie={this.selectMovie}/>
           </>
         }
+        {this.state.error && <Error />}
       </main>
     )
   }

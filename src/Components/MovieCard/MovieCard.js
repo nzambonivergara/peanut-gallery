@@ -7,10 +7,10 @@ const MovieCard = ({ poster, title, ratings, id, selectMovie }) => {
       <img className="card-poster" src={poster} alt={`${title} poster`} />
       <div className="card-details">
         <h3 className="card-title">{title}</h3>
-        <p className="card-rating">⭐️{Math.round(ratings * 10) / 10}</p>
+        <p className="card-rating">⭐️ {Math.round(ratings * 10) / 10}</p>
       </div>
     </article>
-  )
-}
+  );
+};
 
 export default MovieCard;

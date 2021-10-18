@@ -1,23 +1,50 @@
 h2 {
+  font-size: 40px;
   color: white;
 }
-.single-movie-container {
-  display: flex;
-  color: #445566;
-  align-items: flex-start;
-  flex-wrap: nowrap;
+
+h3 {
+  margin-left: 18px;
 }
 
-movie-datails {
+.poster-rating-styling {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.single-movie-container {
+  color: #99aabb;
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+}
+
+.movie-title-styling {
+  display: flex;
+  align-items: baseline;
+  flex-direction: row;
+  justify-content: flex-start;
 }
 
 .single-movie-poster {
+  z-index: 1;
   border-radius: 0%;
-  width: 300px;
+  width: 340px;
   height: 475px;
 }
 
 .movie-details {
+  z-index: 1;
   margin-left: 50px;
+}
+
+.overview {
+  width: 500px;
+  margin-top: 20px;
+}
+
+.movie-genre {
+  margin-top: 20px;
+  border-color: #99aabb;
+  border: 3px solid;
 }

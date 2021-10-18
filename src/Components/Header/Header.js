@@ -12,7 +12,6 @@ const Header = ({ returnHome, bannerImage }) => {
       <button className="all-movies-button" onClick={() => returnHome()}>
         ALL MOVIES
       </button>
-
     </header>
   )
 }

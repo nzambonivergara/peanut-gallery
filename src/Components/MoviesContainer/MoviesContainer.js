@@ -13,14 +13,14 @@ const MoviesContainer = ({ movies, selectMovie }) => {
         key={movie.id}
         selectMovie={selectMovie}
       />
-    );
-  });
+    )
+  })
 
   return (
     <section className="movies-container">
       {movieCards}
     </section>
-  );
-};
+  )
+}
 
 export default MoviesContainer;

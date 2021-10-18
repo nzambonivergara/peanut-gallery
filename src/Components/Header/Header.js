@@ -1,14 +1,17 @@
 import React from 'react';
 import './Header.css';
 
-const Header = () => {
+const Header = ({ returnHome, bannerImage }) => {
   return (
     <header className="Header">
-      <div className="title-container">
-        <h1>The Peanut Gallery</h1>
-        <h2>Find a movie you love, like or hate...</h2>
+      <div className="banner-container">
+        <div className="overlay"></div>
+        <img className="banner" src={bannerImage}/>
       </div>
-      <button>HOME</button>
+      <h1 className="title">The Peanut Gallery</h1>
+      <button className="all-movies-button" onClick={() => returnHome()}>
+        ALL MOVIES
+      </button>
     </header>
   )
 }

@@ -8,32 +8,35 @@ import './App.css';
 
 class App extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       movies: [],
       error: '',
       singleMovie: null,
       bannerImage: ''
-    };
+    }
   }
 
   componentDidMount = () => {
     fetchAllMoviesData()
       .then((movieData) => {
-        const randomMovie = movieData.movies[Math.floor(Math.random() * movieData.movies.length)]
-
-        this.setState({ movies: movieData.movies, bannerImage: randomMovie.backdrop_path })
+        this.setState({
+          movies: movieData.movies,
+          bannerImage: this.getRandomMovieImage(movieData.movies)
+        })
       })
-      .catch((error) => this.setState({ error: error.message }));
-  };
+      .catch((error) => this.setState({ error: error.message }))
+  }
 
   selectMovie = (id) => {
     fetchSingleMovieData(id)
-      .then((singleMovieData) =>
-        this.setState({ singleMovie: singleMovieData.movie })
-      )
-      .catch((error) => this.setState({ error: error.message }));
-  };
+      .then((singleMovieData) => this.setState({ singleMovie: singleMovieData.movie }))
+      .catch((error) => this.setState({ error: error.message }))
+  }
+
+  getRandomMovieImage = (movies) => {
+    return movies[Math.floor(Math.random() * movies.length)].backdrop_path
+  }
 
   returnHome = () => {
     this.setState({ singleMovie: null })
@@ -42,21 +45,26 @@ class App extends Component {
   render() {
     return (
       <main className="App">
-        <Header
-          returnHome={this.returnHome}
-          bannerImage={this.state.bannerImage}/>
-          
-        {this.state.singleMovie ? (
-          <SingleMovie movie={this.state.singleMovie} />
-        ) : (
-          <MoviesContainer
-            movies={this.state.movies}
-            selectMovie={this.selectMovie}
-          />
-        )}
+        {this.state.singleMovie ?
+          <>
+            <Header
+              returnHome={this.returnHome}
+              bannerImage={this.state.singleMovie.poster_path}/>
+            <SingleMovie movie={this.state.singleMovie} />
+          </>
+         :
+          <>
+            <Header
+              returnHome={this.returnHome}
+              bannerImage={this.state.bannerImage}/>
+            <MoviesContainer
+              movies={this.state.movies}
+              selectMovie={this.selectMovie}/>
+          </>
+        }
         {this.state.error && <Error />}
       </main>
-    );
+    )
   }
 }
 

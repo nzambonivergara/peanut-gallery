@@ -44,7 +44,11 @@ class SingleMovie extends Component {
       <main>
         <section className="single-movie-container">
           <div className="poster-rating-styling">
-            <img className="single-movie-poster" src={poster_path} />
+            <img
+              className="single-movie-poster"
+              src={poster_path}
+              alt={title}
+            />
           </div>
           <div className="movie-details">
             <div className="movie-title-styling">
@@ -64,7 +68,9 @@ class SingleMovie extends Component {
             </p>
             <div className="genre-container">
               {genres.map((genre) => (
-                <p className="movie-genre">{genre}</p>
+                <p className="movie-genre" key={genre}>
+                  {genre}
+                </p>
               ))}
             </div>
           </div>
@@ -76,9 +82,9 @@ class SingleMovie extends Component {
               height="400"
               src={`https://www.youtube.com/embed/${this.state.singleTrailer.key}`}
               title="YouTube video player"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             ></iframe>
           )}
         </section>

@@ -51,7 +51,7 @@ class App extends Component {
           <>
             <Header
               returnHome={this.returnHome}
-              bannerImage={this.state.singleMovie.poster_path}
+              bannerImage={this.state.singleMovie.backdrop_path}
             />
             <SingleMovie movie={this.state.singleMovie} />
           </>

@@ -18,7 +18,7 @@ const MovieCard = ({ poster, title, ratings, id, selectMovie }) => {
         <p className="card-rating" aria-label={`Rating ${rating}`}>⭐️{rating}</p>
       </div>
     </article>
-  )
-}
+  );
+};
 
 export default MovieCard;

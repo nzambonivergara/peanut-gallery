@@ -39,15 +39,15 @@
 
 .banner {
   width: 100%;
-  height: 100%;
+  height: 800px;
   object-fit: cover;
 }
 
 .overlay {
   width: 100%;
-  height: 500px;
+  height: 800px;
   position: absolute;
-  top:0;
+  top: 0;
   right: 0;
-  background: radial-gradient(rgba(0, 0, 0, 0.3071) 10%, rgb(0 0 0 / 90%) 90%);
+  background: radial-gradient(rgba(0, 0, 0, 0.3071) 10%, rgb(0 0 0) 90%);
 }

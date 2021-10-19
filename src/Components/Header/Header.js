@@ -6,7 +6,7 @@ const Header = ({ returnHome, bannerImage }) => {
     <header className="Header">
       <div className="banner-container">
         <div className="overlay"></div>
-        <img className="banner" src={bannerImage}/>
+        <img className="banner" src={bannerImage} alt="movie backdrop"/>
       </div>
       <h1 className="title">The Peanut Gallery</h1>
       <button className="all-movies-button" onClick={() => returnHome()}>

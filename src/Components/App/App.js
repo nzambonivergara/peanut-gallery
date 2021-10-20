@@ -13,7 +13,6 @@ class App extends Component {
     this.state = {
       movies: [],
       error: '',
-      bannerImage: '',
     };
   }
 
@@ -22,15 +21,17 @@ class App extends Component {
       .then((movieData) => {
         this.setState({
           movies: movieData.movies,
-          bannerImage: this.getRandomMovieImage(movieData.movies),
         });
       })
-
       .catch((error) => this.setState({ error: error.message }));
   };
 
-  getRandomMovieImage = (movies) => {
-    return movies[Math.floor(Math.random() * movies.length)].backdrop_path;
+  getRandomMovieImage = () => {
+    if (this.state.movies.length) {
+      return this.state.movies[
+        Math.floor(Math.random() * this.state.movies.length)
+      ].backdrop_path;
+    }
   };
 
   returnHome = () => {
@@ -46,7 +47,7 @@ class App extends Component {
           render={() => {
             return (
               <>
-                <Header bannerImage={this.state.bannerImage} />
+                <Header bannerImage={this.getRandomMovieImage()} />
                 <MoviesContainer
                   movies={this.state.movies}
                   selectMovie={this.selectMovie}
@@ -60,15 +61,9 @@ class App extends Component {
           path="/:id"
           render={({ match }) => {
             const currentMovieId = parseInt(match.params.id);
-            console.log('match', match);
-            return (
-              <>
-                <SingleMovie id={currentMovieId} />
-              </>
-            );
+            return <SingleMovie id={currentMovieId} />;
           }}
         />
-
         {this.state.error && <Error />}
       </main>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
+import Error from '../Error/Error';
 import { fetchMovieTrailer, fetchSingleMovieData } from '../../apiCalls';
 import './SingleMovie.css';
 var formatter = new Intl.NumberFormat('en-US', {
@@ -36,7 +37,6 @@ class SingleMovie extends Component {
   };
 
   render() {
-    // console.log(this.state);
     // const {
     //   poster_path,
     //   average_rating,
@@ -53,7 +53,7 @@ class SingleMovie extends Component {
     return (
       <main>
         {this.state.singleMovie && (
-          <fragment>
+          <>
             <Header bannerImage={this.state.singleMovie.backdrop_path} />
             <section className="single-movie-container">
               <div className="poster-rating-styling">
@@ -90,7 +90,7 @@ class SingleMovie extends Component {
                 </div>
               </div>
             </section>
-          </fragment>
+          </>
         )}
         <section className="trailer-container">
           {this.state.singleTrailer && (
@@ -105,6 +105,7 @@ class SingleMovie extends Component {
             ></iframe>
           )}
         </section>
+        {this.state.error && <Error />}
       </main>
     );
   }

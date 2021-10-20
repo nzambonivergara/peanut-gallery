@@ -3,7 +3,7 @@ import Header from '../Header/Header';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import SingleMovie from '../SingleMovie/SingleMovie';
 import Error from '../Error/Error';
-import { fetchAllMoviesData, fetchSingleMovieData } from '../../apiCalls';
+import { fetchAllMoviesData } from '../../apiCalls';
 import { Route } from 'react-router-dom';
 import './App.css';
 
@@ -13,7 +13,6 @@ class App extends Component {
     this.state = {
       movies: [],
       error: '',
-      singleMovie: null,
       bannerImage: '',
     };
   }
@@ -27,14 +26,6 @@ class App extends Component {
         });
       })
 
-      .catch((error) => this.setState({ error: error.message }));
-  };
-
-  selectMovie = (id) => {
-    fetchSingleMovieData(id)
-      .then((singleMovieData) =>
-        this.setState({ singleMovie: singleMovieData.movie })
-      )
       .catch((error) => this.setState({ error: error.message }));
   };
 
@@ -64,29 +55,17 @@ class App extends Component {
             );
           }}
         />
-            <Route 
-            exact path='/movie/:id' 
-            render={({ match }) => <Movie movieID={parseInt(match.params.id)} />
-          // />
-          //         <>
-          //           <Header
-          //             bannerImage={this.state.singleMovie.backdrop_path}
-          //           />
-          //           <SingleMovie
-          //             movie={this.state.singleMovie}
-          //             id={parseInt(match.params.id)}
-          //           />
-          //         </>
-          //       );
-          //     }}
-          //   />;
+        <Route
+          exact
+          path="/:id"
+          render={({ match }) => {
+            const currentMovieId = parseInt(match.params.id);
             console.log('match', match);
-            // return (
-            //   <>
-            //     <Header bannerImage={this.state.singleMovie.backdrop_path} />
-            //     <SingleMovie movie={this.state.singleMovie} />
-            //   </>
-            // );
+            return (
+              <>
+                <SingleMovie id={currentMovieId} />
+              </>
+            );
           }}
         />
 

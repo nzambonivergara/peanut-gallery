@@ -34,6 +34,10 @@ describe('Home View', () => {
     cy.get('h1').contains('🍿 The Popcorn Gallery')
   });
 
+  it('Should not display an ALL MOVIES button', () => {
+    cy.get('.all-movies-nav').should('not.be.visible')
+  });
+
   it('Should display all movie cards', () => {
     cy.get('h2').contains('Money Plane')
       .get('p').contains('⭐️6.1')

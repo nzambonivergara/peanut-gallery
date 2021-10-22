@@ -1,6 +1,6 @@
 .Header {
-  /* font-family: fantasy; */
-  color: #eed47b;
+  font-family: TiemposHeadlineWeb-Bold, Georgia, serif;
+  color: white;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -15,23 +15,49 @@
   text-transform: uppercase;
   font-size: 48px;
   margin: 30px;
-  width: 800px;
+  width: 400px;
+}
+
+.title-container {
   z-index: 1;
+  display: flex;
+  margin: 25px;
+  align-items: center;
+}
+
+.popcorn-image {
+  filter: brightness(110%);
+  width: 165px;
 }
 
 .all-movies-nav {
+  text-decoration: none;
+  color: white;
   background-color: transparent;
   border: 0;
   border-bottom: 4px solid transparent;
-  color: white;
   font-size: 24px;
   margin: 20px;
   z-index: 1;
 }
 
 .all-movies-nav:hover {
-  border-bottom: 4px solid white;
-  /* cursor: pointer; */
+  border-bottom: 3px solid white;
+}
+
+.sign-in-nav {
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: 0;
+  border-bottom: 4px solid transparent;
+  font-size: 24px;
+  margin: 20px;
+  z-index: 1;
+}
+
+.sign-in-nav:hover {
+  border-bottom: 3px solid white;
 }
 
 .banner-container {
@@ -54,5 +80,5 @@
   position: absolute;
   top: 0;
   right: 0;
-  background: radial-gradient(rgba(0, 0, 0, 0.3071) 10%, rgb(0 0 0) 90%);
+  background: linear-gradient(to bottom, rgb(0 0 0 / 32%) 10%, rgb(0 0 0) 90%);
 }

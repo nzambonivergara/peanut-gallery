@@ -3,8 +3,9 @@ import Header from '../Header/Header';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import SingleMovie from '../SingleMovie/SingleMovie';
 import Error from '../Error/Error';
+import SignIn from '../SignInPage/SignInPage';
 import { fetchAllMoviesData } from '../../apiCalls';
-import { Route } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -56,14 +57,17 @@ class App extends Component {
             );
           }}
         />
-        <Route
-          exact
-          path="/:id"
-          render={({ match }) => {
-            const currentMovieId = parseInt(match.params.id);
-            return <SingleMovie id={currentMovieId} />;
-          }}
-        />
+        <Switch>
+          <Route exact path="/signin" render={() => <SignIn />} />
+          <Route
+            exact
+            path="/:id"
+            render={({ match }) => {
+              const currentMovieId = parseInt(match.params.id);
+              return <SingleMovie id={currentMovieId} />;
+            }}
+          />
+        </Switch>
         {this.state.error && <Error />}
       </main>
     );

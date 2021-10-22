@@ -58,7 +58,18 @@ class App extends Component {
           }}
         />
         <Switch>
-          <Route exact path="/signin" render={() => <SignIn />} />
+          <Route
+            exact
+            path="/signin"
+            render={() => {
+              return (
+                <>
+                  <Header bannerImage={this.getRandomMovieImage()} />
+                  <SignIn />
+                </>
+              );
+            }}
+          />
           <Route
             exact
             path="/:id"

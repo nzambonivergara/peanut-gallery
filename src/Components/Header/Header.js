@@ -1,6 +1,5 @@
 import React from 'react';
 import './Header.css';
-import popcorn from '../../popcorn1.png';
 import { NavLink } from 'react-router-dom';
 
 const Header = ({ returnHome, bannerImage }) => {

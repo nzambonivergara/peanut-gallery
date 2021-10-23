@@ -18,7 +18,7 @@ const MoviesContainer = ({ movies, selectMovie }) => {
 
   return (
     <section className="movies-container">
-      {movieCards}
+      {movies.length ? movieCards : <h2 className="noMatch">🍿 We couldn't find any matches 🍿</h2>}
     </section>
   )
 }

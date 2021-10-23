@@ -7,3 +7,9 @@
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.noMatch {
+  position: fixed;
+  color: white;
+  font-size: 40px;
+}

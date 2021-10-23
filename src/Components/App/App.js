@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from '../Header/Header';
+import SearchForm from '../SearchForm/SearchForm';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import SingleMovie from '../SingleMovie/SingleMovie';
 import Error from '../Error/Error';
@@ -13,6 +14,7 @@ class App extends Component {
     this.state = {
       movies: [],
       error: '',
+      filteredMovies: []
     };
   }
 
@@ -21,6 +23,7 @@ class App extends Component {
       .then((movieData) => {
         this.setState({
           movies: movieData.movies,
+          filteredMovies: movieData.movies
         });
       })
       .catch((error) => this.setState({ error: error.message }));
@@ -34,9 +37,14 @@ class App extends Component {
     }
   };
 
-  returnHome = () => {
-    this.setState({ singleMovie: null });
-  };
+  filterMovies = (searchTerm) => {
+    const filteredMovies = this.state.movies.filter(movie => movie.title.toLowerCase().includes(searchTerm))
+    this.setState({ filteredMovies: filteredMovies })
+  }
+
+  clearFilteredMovies = () => {
+    this.setState({ filteredMovies: this.state.movies })
+  }
 
   render() {
     return (
@@ -48,10 +56,15 @@ class App extends Component {
             return (
               <>
                 <Header bannerImage={this.getRandomMovieImage()} />
-                <MoviesContainer
-                  movies={this.state.movies}
-                  selectMovie={this.selectMovie}
-                />
+                <SearchForm filterMovies={this.filterMovies} />
+                {this.state.movies.length ?
+                  <MoviesContainer
+                    movies={this.state.filteredMovies}
+                    selectMovie={this.selectMovie}
+                  />
+                  :
+                  <h2 className="loading">🍿 Loading...</h2>
+                }
               </>
             );
           }}
@@ -61,7 +74,7 @@ class App extends Component {
           path="/:id"
           render={({ match }) => {
             const currentMovieId = parseInt(match.params.id);
-            return <SingleMovie id={currentMovieId} />;
+            return <SingleMovie id={currentMovieId} clearFilteredMovies={this.clearFilteredMovies} />;
           }}
         />
         {this.state.error && <Error />}

@@ -82,8 +82,8 @@ class SingleMovie extends Component {
         <section className="trailer-container">
           {this.state.singleTrailer && (
             <iframe
-              width="600"
-              height="400"
+              width="800"
+              height="550"
               src={`https://www.youtube.com/embed/${this.state.singleTrailer.key}`}
               title="YouTube video player"
               frameBorder="0"

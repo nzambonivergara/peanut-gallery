@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 class SignIn extends Component {
   render() {
     return (
-      <body className="sign-in-page">
+      <div className="sign-in-page">
         <form className="sign-in-form">
           <h2 className="sign-in-title">Sign In</h2>
           <div className="input-containers">
@@ -24,7 +24,7 @@ class SignIn extends Component {
             </Link>
           </div>
         </form>
-      </body>
+      </div>
     );
   }
 }

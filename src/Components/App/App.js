@@ -15,7 +15,7 @@ class App extends Component {
     this.state = {
       movies: [],
       error: '',
-      filteredMovies: []
+      filteredMovies: [],
     };
   }
 
@@ -24,7 +24,7 @@ class App extends Component {
       .then((movieData) => {
         this.setState({
           movies: movieData.movies,
-          filteredMovies: movieData.movies
+          filteredMovies: movieData.movies,
         });
       })
       .catch((error) => this.setState({ error: error.message }));
@@ -39,13 +39,15 @@ class App extends Component {
   };
 
   filterMovies = (searchTerm) => {
-    const filteredMovies = this.state.movies.filter(movie => movie.title.toLowerCase().includes(searchTerm))
-    this.setState({ filteredMovies: filteredMovies })
-  }
+    const filteredMovies = this.state.movies.filter((movie) =>
+      movie.title.toLowerCase().includes(searchTerm)
+    );
+    this.setState({ filteredMovies: filteredMovies });
+  };
 
   clearFilteredMovies = () => {
-    this.setState({ filteredMovies: this.state.movies })
-  }
+    this.setState({ filteredMovies: this.state.movies });
+  };
 
   render() {
     return (
@@ -58,19 +60,18 @@ class App extends Component {
               <>
                 <Header bannerImage={this.getRandomMovieImage()} />
                 <SearchForm filterMovies={this.filterMovies} />
-                {this.state.movies.length ?
+                {this.state.movies.length ? (
                   <MoviesContainer
                     movies={this.state.filteredMovies}
                     selectMovie={this.selectMovie}
                   />
-                  :
+                ) : (
                   <h2 className="loading">🍿 Loading...</h2>
-                }
+                )}
               </>
             );
           }}
         />
-feature/login-page
         <Switch>
           <Route
             exact
@@ -89,20 +90,15 @@ feature/login-page
             path="/:id"
             render={({ match }) => {
               const currentMovieId = parseInt(match.params.id);
-              return <SingleMovie id={currentMovieId} />;
+              return (
+                <SingleMovie
+                  id={currentMovieId}
+                  clearFilteredMovies={this.clearFilteredMovies}
+                />
+              );
             }}
           />
         </Switch>
-
-        <Route
-          exact
-          path="/:id"
-          render={({ match }) => {
-            const currentMovieId = parseInt(match.params.id);
-            return <SingleMovie id={currentMovieId} clearFilteredMovies={this.clearFilteredMovies} />;
-          }}
-        />
- main
         {this.state.error && <Error />}
       </main>
     );

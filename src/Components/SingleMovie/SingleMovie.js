@@ -37,24 +37,11 @@ class SingleMovie extends Component {
   };
 
   render() {
-    // const {
-    //   poster_path,
-    //   average_rating,
-    //   title,
-    //   release_date,
-    //   runtime,
-    //   tagline,
-    //   overview,
-    //   budget,
-    //   revenue,
-    //   // genres,
-    // } = this.state.singleMovie;
-
     return (
       <main>
         {this.state.singleMovie && (
           <>
-            <Header bannerImage={this.state.singleMovie.backdrop_path} />
+            <Header bannerImage={this.state.singleMovie.backdrop_path} clearFilteredMovies={this.props.clearFilteredMovies}/>
             <section className="single-movie-container">
               <div className="poster-rating-styling">
                 <img
@@ -65,7 +52,7 @@ class SingleMovie extends Component {
               </div>
               <div className="movie-details">
                 <div className="movie-title-styling">
-                  <h2>{this.state.singleMovie.title}</h2>
+                  <h2 className="movie-title">{this.state.singleMovie.title}</h2>
                   <h3>
                     {this.state.singleMovie.release_date} •{' '}
                     {this.state.singleMovie.runtime}mins

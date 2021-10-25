@@ -13,14 +13,18 @@ const MoviesContainer = ({ movies, selectMovie }) => {
         key={movie.id}
         selectMovie={selectMovie}
       />
-    )
-  })
+    );
+  });
 
   return (
     <section className="movies-container">
-      {movies.length ? movieCards : <h2 className="noMatch">🍿 We couldn't find any matches 🍿</h2>}
+      {movies.length ? (
+        movieCards
+      ) : (
+        <h2 className="noMatch">🍿 No results found 🍿</h2>
+      )}
     </section>
-  )
-}
+  );
+};
 
 export default MoviesContainer;

@@ -1,6 +1,13 @@
 form {
   position: absolute;
   z-index: 3;
-  top: 200px;
-  left: 45%;
+  top: 120px;
+  right: 40px;
+}
+
+.search-input {
+  font-size: 15px;
+  border-radius: 3px;
+  padding: 5px;
+  width: 200px;
 }

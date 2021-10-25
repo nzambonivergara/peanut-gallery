@@ -38,7 +38,7 @@ class SingleMovie extends Component {
 
   render() {
     return (
-      <main>
+      <div>
         {this.state.singleMovie && (
           <>
             <Header bannerImage={this.state.singleMovie.backdrop_path} clearFilteredMovies={this.props.clearFilteredMovies}/>
@@ -93,7 +93,7 @@ class SingleMovie extends Component {
           )}
         </section>
         {this.state.error && <Error />}
-      </main>
+      </div>
     );
   }
 }

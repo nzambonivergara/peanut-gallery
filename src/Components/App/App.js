@@ -6,7 +6,7 @@ import SingleMovie from '../SingleMovie/SingleMovie';
 import Error from '../Error/Error';
 import SignIn from '../SignInPage/SignInPage';
 import { fetchAllMoviesData } from '../../apiCalls';
-import { Route, Switch } from 'react-router-dom';
+import { Route, Switch, NavLink } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -58,8 +58,13 @@ class App extends Component {
           render={() => {
             return (
               <>
-                <Header bannerImage={this.getRandomMovieImage()} />
+                <Header
+                  bannerImage={this.getRandomMovieImage()}  clearFilteredMovies={this.clearFilteredMovies}
+                />
                 <SearchForm filterMovies={this.filterMovies} />
+                <NavLink to="/signin" className="sign-in-nav">
+                  SIGN IN
+                </NavLink>
                 {this.state.movies.length ? (
                   <MoviesContainer
                     movies={this.state.filteredMovies}

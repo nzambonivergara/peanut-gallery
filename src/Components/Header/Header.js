@@ -14,18 +14,14 @@ const Header = ({ bannerImage, clearFilteredMovies }) => {
           The <span>P🍿pcorn</span> Gallery
         </h1>
       </div>
-      <h1 className="title">🍿 The Popcorn Gallery</h1>
       <NavLink
         exact
         to="/"
         className="all-movies-nav"
-        onClick={() => clearFilteredMovies()}
+        onClick={clearFilteredMovies}
       >
         ALL MOVIES
-      </NavLink>
-      <NavLink exact to="/signin" className="sign-in-nav">
-        SIGN IN
-      </NavLink>
+      </NavLink>  
     </header>
   );
 };

@@ -1,11 +1,6 @@
 # The Popcorn Gallery
 
-- [Project Spec](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html)
-
-## Contributors
-
-- [Raquel Hill](https://github.com/Raquelhill)
-- [Natalia Zamboni Vergara](https://github.com/nzambonivergara)
+- [Project Spec](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html) provided by the Turing School of Software & Design.
 
 ## Abstract
 
@@ -13,19 +8,19 @@ The Popcorn Gallery is a React built application where the user can browse movie
 
 ## Snapshots of Application
 
-Home View:
+**Home View:**
 
 ![recording (11)](https://user-images.githubusercontent.com/83611094/138778337-032c1a88-5bb0-45e9-b09a-b12a83d00136.gif)
 
-Live Search Functionality: 
+**Live Search Functionality:** 
 
 ![recording (12)](https://user-images.githubusercontent.com/83611094/138778683-74331a43-f5e1-4514-98ca-c2f470cfab47.gif)
 
-Single Movie View:
+**Single Movie View:**
 
 ![recording (8)](https://user-images.githubusercontent.com/83611094/138777363-bf427ae1-135c-4f7d-97dc-eb9af21e93c3.gif)
 
-Sing In View:
+**Sing In View:**
 
 ![recording (14)](https://user-images.githubusercontent.com/83611094/138778786-48c2ab25-8d1a-4706-ad26-f917a7d99202.gif)
 
@@ -110,4 +105,13 @@ Sing In View:
 - Complete the sign in functionality through building an Express back end server
 - Allow users to submit ratings and save movies to their favorites
 - Add filtering functionality to search by genre
+
+## Contributors
+
+This project was developed by:
+
+- [Raquel Hill](https://github.com/Raquelhill)
+- [Natalia Zamboni Vergara](https://github.com/nzambonivergara)
+
+*Raquel and Natalia are students of front-end engineering at the Turing School of Software & Design.*
 ---

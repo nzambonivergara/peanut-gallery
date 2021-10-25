@@ -9,7 +9,7 @@
 
 ## Abstract
 
-The Popcorn Gallery is an application where the user can browse movies, search movies by title, and view more details about each movie, including, but not limited to, an overview, release date, revenue, and trailer. 
+The Popcorn Gallery is a React built application where the user can browse movies, search movies by title, and view more details about each movie, including, but not limited to, an overview, release date, revenue, and trailer. 
 
 ## Snapshots of Application
 
@@ -30,7 +30,8 @@ Sing In View:
 ![recording (14)](https://user-images.githubusercontent.com/83611094/138778786-48c2ab25-8d1a-4706-ad26-f917a7d99202.gif)
 
 1. From the home view, the user can:
-    - view all movies.
+    - view all movies. 
+    - a loading page will display first if the data needs time to load.
     - search movies by title.
     - choose to select a single movie to see more details about that movie.
     - choose to sign in.
@@ -70,6 +71,20 @@ Sing In View:
     </tr>
 </table>
 
+## Install/ Set Up Instructions
+
+1. Clone down this repository.
+  ```
+  git clone git@github.com:nzambonivergara/popcorn-gallery.git
+  ```
+2. In your terminal, run:
+  ```
+  npm install
+  npm start
+  ```
+3. Enter the following url in your browser: http://localhost:3000/
+4. Explore the website.
+
 ## Wins
 
 - Successfully utilizing React from the planning process to implementing contolled forms
@@ -85,26 +100,14 @@ Sing In View:
 
 ## Challenges
 
-- Ensuring 
-
-## Install/ Set Up Instructions
-
-
-1. Clone down this repository.
-  ```
-  git clone git@github.com:nzambonivergara/popcorn-gallery.git
-  ```
-2. In your terminal, run:
-  ```
-  npm install
-  npm start
-  ```
-3. Enter the following url in your browser: http://localhost:3000/
-4. Explore the website.
+- Implementing React for the first time challenged us to plan our project differently
+- Refactoring our project to implement React Router for the first time
+- Utilizing Cypress for the first time was an interesting challenge
+- Keeping our CSS organized and ensuring our styling was applied appropriately
 
 ## Future Features
 
 - Complete the sign in functionality through building an Express back end server
 - Allow users to submit ratings and save movies to their favorites
-- Add filtering functionality to search by genre.
+- Add filtering functionality to search by genre
 ---

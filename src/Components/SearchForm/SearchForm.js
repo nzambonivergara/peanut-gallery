@@ -23,6 +23,7 @@ class SearchForm extends Component {
           type="text"
           placeholder="🔎 Search movies by title..."
           name="searchTerm"
+          aria-label="Search movies by title"
           value={this.state.searchTerm}
           onChange={(event) => this.handleChange(event)}
         />

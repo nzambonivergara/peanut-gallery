@@ -15,15 +15,19 @@ The Popcorn Gallery is an application where the user can browse movies, search m
 
 Home View:
 
+![recording (11)](https://user-images.githubusercontent.com/83611094/138778337-032c1a88-5bb0-45e9-b09a-b12a83d00136.gif)
 
+Live Search Functionality: 
+
+![recording (12)](https://user-images.githubusercontent.com/83611094/138778683-74331a43-f5e1-4514-98ca-c2f470cfab47.gif)
 
 Single Movie View:
 
-
+![recording (8)](https://user-images.githubusercontent.com/83611094/138777363-bf427ae1-135c-4f7d-97dc-eb9af21e93c3.gif)
 
 Sing In View:
 
-
+![recording (14)](https://user-images.githubusercontent.com/83611094/138778786-48c2ab25-8d1a-4706-ad26-f917a7d99202.gif)
 
 1. From the home view, the user can:
     - view all movies.
@@ -34,7 +38,7 @@ Sing In View:
     - view selected movie details.
     - view the movie's trailer.
     - return to the home view.
-4. When the user clicks the sign in button, the user can enter their email and password. When they submit, it takes them to the home page.
+4. When the user clicks the sign in button, the user can enter their email and password. When they submit, it takes them to the home page. There is no authentication process as this view was built for the functionality to be completed in a future iteration.
 
 
 ## Technologies
@@ -68,49 +72,39 @@ Sing In View:
 
 ## Wins
 
-- Learning how to use Fetch API and successfully integrating functionality into project
+- Successfully utilizing React from the planning process to implementing contolled forms
+- Building a multi-page website utilizing React Router
+- Implementing end-to-end (E2E) testing with Cypress for the first time
 - Working asynchronously to tackle various parts of the project and resolving merge conflicts as they arose
-- Using a wireframe program to outline high level project aesthetic and functionality
-- Using Github Project Board for the first time
+- Creating appropriate error handling and displaying error and loading messages to the user
+- Using Figma to outline high level project aesthetic and functionality
+- Using Github Project Board to plan our project
 - Collaborating with team mates to tackle complicated tasks and trying various approaches
-- Integrating a third party package for our Micromodal functionality
-- Utilizing SCSS successfully
 - Making our application meet accessibility principles  
 - Utilizing resources such as web documents and mentors to expand knowledge base and maximize application display and performance
 
 ## Challenges
 
-- Planning out project with Github Project Board and anticipating how long each task will take to complete
-- Keeping up with reviewing and merging PRs
-- Communicating additions or changes in project with team members
-- Merging branches together after independent coding
-- Accessing and managing the data and ensuring we write clear readable code
+- Ensuring 
 
 ## Install/ Set Up Instructions
 
-### Backend Set Up
-
-1. Go to this [repository](https://github.com/turingschool-examples/whats-cookin-api)
-2. Follow Set Up instructions.
-
-### Frontend Set Up
 
 1. Clone down this repository.
   ```
-  git clone git@github.com:nzambonivergara/whats-cookin.git
+  git clone git@github.com:nzambonivergara/popcorn-gallery.git
   ```
 2. In your terminal, run:
   ```
   npm install
   npm start
   ```
-3. Enter the following url in your browser: http://localhost:8080/
+3. Enter the following url in your browser: http://localhost:3000/
 4. Explore the website.
 
 ## Future Features
 
-- Create search functionality within favorited recipes section
-- Allow users to create and save recipe cards
-- Update weekly recipes view to include entire month and link to online calendar
-- Assess more accessibility updates and opportunities for better user experience
+- Complete the sign in functionality through building an Express back end server
+- Allow users to submit ratings and save movies to their favorites
+- Add filtering functionality to search by genre.
 ---

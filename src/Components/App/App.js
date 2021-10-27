@@ -16,6 +16,7 @@ class App extends Component {
       movies: [],
       error: '',
       filteredMovies: [],
+      isLoading: true,
     };
   }
 
@@ -25,9 +26,10 @@ class App extends Component {
         this.setState({
           movies: movieData.movies,
           filteredMovies: movieData.movies,
+          isLoading: false
         });
       })
-      .catch((error) => this.setState({ error: error.message }));
+      .catch((error) => this.setState({ error: error.message, isLoading: false }));
   };
 
   getRandomMovieImage = () => {
@@ -59,20 +61,23 @@ class App extends Component {
             return (
               <>
                 <Header
-                  bannerImage={this.getRandomMovieImage()}  clearFilteredMovies={this.clearFilteredMovies}
+                  bannerImage={this.getRandomMovieImage()}
+                  clearFilteredMovies={this.clearFilteredMovies}
                 />
                 <SearchForm filterMovies={this.filterMovies} />
                 <NavLink to="/signin" className="sign-in-nav">
                   SIGN IN
                 </NavLink>
-                {this.state.movies.length ? (
+                {this.state.movies.length && (
                   <MoviesContainer
                     movies={this.state.filteredMovies}
                     selectMovie={this.selectMovie}
                   />
-                ) : (
-                  <h2 className="loading">🍿 Loading...</h2>
                 )}
+                {this.state.isLoading && (
+                  <h3 className="loading">🍿 Loading...</h3>
+                )}
+                {this.state.error && <Error />}
               </>
             );
           }}
@@ -104,7 +109,6 @@ class App extends Component {
             }}
           />
         </Switch>
-        {this.state.error && <Error />}
       </main>
     );
   }

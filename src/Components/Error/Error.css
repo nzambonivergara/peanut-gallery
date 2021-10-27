@@ -1,4 +1,7 @@
 .error-message {
   text-align: center;
   font-size: 32px;
+  position: fixed;
+  left: 200px;
+  color: white;
 }

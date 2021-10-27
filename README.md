@@ -1,10 +1,10 @@
-# The Popcorn Gallery
+# Roasted Popcorn
 
 - [Project Spec](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html) provided by the Turing School of Software & Design.
 
 ## Abstract
 
-The Popcorn Gallery is a React built application where the user can browse movies, search movies by title, and view more details about each movie, including, but not limited to, an overview, release date, revenue, and trailer. 
+Roasted Popcorn is a React built application where the user can browse movies, search movies by title, and view more details about each movie, including, but not limited to, an overview, release date, revenue, and trailer. 
 
 ## Snapshots of Application
 

@@ -31,7 +31,7 @@ describe('Home View', () => {
   });
 
   it('Should have an h1 that displays the title of the page', () => {
-    cy.get('h1').contains('🍿 The Popcorn Gallery')
+    cy.get('h1').contains('Roasted P🍿pcorn')
   });
 
   it('Should not display an ALL MOVIES button', () => {
@@ -40,7 +40,7 @@ describe('Home View', () => {
 
   it('Should display all movie cards', () => {
     cy.get('h2').contains('Money Plane')
-      .get('p').contains('⭐️6.1')
+      .get('p').contains('⭐️6.6')
       .get('#694919 > img')
         .should('have.attr', 'src','https://image.tmdb.org/t/p/original//6CoRTJTmijhBLJTUNoVSUNxZMEI.jpg')
         .should('have.attr', 'alt').should('eq','Money Plane poster')
@@ -54,26 +54,6 @@ describe('Home View', () => {
       .get('p').contains('⭐️6.2')
       .get('#718444 > img').should('have.attr', 'src', 'https://image.tmdb.org/t/p/original//uOw5JD8IlD546feZ6oxbIjvN66P.jpg')
         .should('have.attr', 'alt').should('eq','Rogue poster')
-  });
-
-  it('Should display an error message if the server is down', () => {
-    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
-      statusCode: 500,
-      body: {
-        message: 'Server is down'
-      }
-    })
-    .get('h2').contains('Sorry, no comments from the popcorn gallery! Try again later!')
-  });
-
-  it('Should display an error message if the movies request fails', () => {
-    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
-      statusCode: 404,
-      body: {
-        message: 'Movies not found'
-      }
-    })
-    .get('h2').contains('Sorry, no comments from the popcorn gallery! Try again later!')
   });
 
   it('Should be able to click on a movie card and change the url', () => {
@@ -103,3 +83,29 @@ describe('Home View', () => {
       .url().should('include', 'http://localhost:3000/694919')
   });
 });
+
+describe('Home View', () => {
+  it('Should display an error message if the server is down', () => {
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
+      statusCode: 500,
+      body: {
+        message: 'Server is down'
+      }
+    })
+
+    cy.visit('http://localhost:3000')
+      .get('h2').contains('Sorry, we burnt the popcorn! Try again later!')
+  });
+
+  it('Should display an error message if the movies request fails', () => {
+    cy.intercept('GET', 'https://rancid-tomatillos.herokuapp.com/api/v2/movies', {
+      statusCode: 404,
+      body: {
+        message: 'Movies not found'
+      }
+    })
+
+    cy.visit('http://localhost:3000')
+      .get('h2').contains('Sorry, we burnt the popcorn! Try again later!')
+  });
+})

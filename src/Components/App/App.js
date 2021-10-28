@@ -16,6 +16,7 @@ class App extends Component {
       error: '',
       filteredMovies: [],
       isLoading: true,
+      bannerImage: '',
     };
   }
 
@@ -26,6 +27,7 @@ class App extends Component {
           movies: movieData.movies,
           filteredMovies: movieData.movies,
           isLoading: false,
+          bannerImage: this.getRandomMovieImage(movieData.movies),
         });
       })
       .catch((error) =>
@@ -33,12 +35,8 @@ class App extends Component {
       );
   };
 
-  getRandomMovieImage = () => {
-    if (this.state.movies.length) {
-      return this.state.movies[
-        Math.floor(Math.random() * this.state.movies.length)
-      ].backdrop_path;
-    }
+  getRandomMovieImage = (movies) => {
+    return movies[Math.floor(Math.random() * movies.length)].backdrop_path;
   };
 
   filterMovies = (searchTerm) => {
@@ -62,7 +60,7 @@ class App extends Component {
             return (
               <>
                 <Header
-                  bannerImage={this.getRandomMovieImage()}
+                  bannerImage={this.state.bannerImage}
                   clearFilteredMovies={this.clearFilteredMovies}
                 />
                 <SearchForm filterMovies={this.filterMovies} />

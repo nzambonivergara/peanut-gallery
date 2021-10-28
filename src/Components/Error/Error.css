@@ -3,14 +3,12 @@
   line-height: 100px;
 }
 
-.error-message {
-  font-size: 32px;
-  color: white;
-}
-
+.error-message,
 .error-message-link {
   font-size: 32px;
   color: white;
+  position: relative;
+  z-index: 1;
 }
 
 .error-message-link:hover {

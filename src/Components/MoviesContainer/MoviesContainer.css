@@ -1,15 +1,14 @@
 .movies-container {
-  /* padding-top: 100px; */
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-  justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .noMatch {
-  position: fixed;
   color: white;
   font-size: 40px;
+  position: fixed;
 }

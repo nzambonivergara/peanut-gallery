@@ -3,8 +3,8 @@
 }
 
 .loading {
-  position: fixed;
-  left: 40%;
   color: white;
   font-size: 40px;
+  position: fixed;
+  left: 40%;
 }

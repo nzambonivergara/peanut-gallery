@@ -1,3 +1,9 @@
+<div align="center">
+<h1>Roasted P🍿pcorn</h1>
+<p>A React built application where the user can browse movies, search movies by title, and view more details about each movie.</p>
+<a href="https://roasted-popcorn-mod3.surge.sh/">View Deployed Site Here</a>
+</div>
+
 # Roasted Popcorn
 
 - [Project Spec](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html) provided by the Turing School of Software & Design.

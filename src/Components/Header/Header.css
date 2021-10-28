@@ -31,7 +31,6 @@
   width: 165px;
 }
 
-.sign-in-nav,
 .all-movies-nav {
   text-decoration: none;
   color: white;
@@ -44,15 +43,8 @@
   z-index: 1;
 }
 
-.sign-in-nav:hover,
 .all-movies-nav:hover {
   border-bottom: 3px solid white;
-}
-
-.sign-in-nav {
-    position: absolute;
-    top: 0;
-    right: 0;
 }
 
 .banner-container {

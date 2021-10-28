@@ -4,9 +4,8 @@ import SearchForm from '../SearchForm/SearchForm';
 import MoviesContainer from '../MoviesContainer/MoviesContainer';
 import SingleMovie from '../SingleMovie/SingleMovie';
 import Error from '../Error/Error';
-import SignIn from '../SignInPage/SignInPage';
 import { fetchAllMoviesData } from '../../apiCalls';
-import { Route, Switch, NavLink } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
@@ -26,10 +25,12 @@ class App extends Component {
         this.setState({
           movies: movieData.movies,
           filteredMovies: movieData.movies,
-          isLoading: false
+          isLoading: false,
         });
       })
-      .catch((error) => this.setState({ error: error.message, isLoading: false }));
+      .catch((error) =>
+        this.setState({ error: error.message, isLoading: false })
+      );
   };
 
   getRandomMovieImage = () => {
@@ -65,9 +66,6 @@ class App extends Component {
                   clearFilteredMovies={this.clearFilteredMovies}
                 />
                 <SearchForm filterMovies={this.filterMovies} />
-                <NavLink to="/signin" className="sign-in-nav">
-                  SIGN IN
-                </NavLink>
                 {this.state.movies.length && (
                   <MoviesContainer
                     movies={this.state.filteredMovies}
@@ -82,33 +80,19 @@ class App extends Component {
             );
           }}
         />
-        <Switch>
-          <Route
-            exact
-            path="/signin"
-            render={() => {
-              return (
-                <>
-                  <Header bannerImage={this.getRandomMovieImage()} />
-                  <SignIn />
-                </>
-              );
-            }}
-          />
-          <Route
-            exact
-            path="/:id"
-            render={({ match }) => {
-              const currentMovieId = parseInt(match.params.id);
-              return (
-                <SingleMovie
-                  id={currentMovieId}
-                  clearFilteredMovies={this.clearFilteredMovies}
-                />
-              );
-            }}
-          />
-        </Switch>
+        <Route
+          exact
+          path="/:id"
+          render={({ match }) => {
+            const currentMovieId = parseInt(match.params.id);
+            return (
+              <SingleMovie
+                id={currentMovieId}
+                clearFilteredMovies={this.clearFilteredMovies}
+              />
+            );
+          }}
+        />
       </main>
     );
   }

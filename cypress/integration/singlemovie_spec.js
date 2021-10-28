@@ -90,7 +90,7 @@ describe('Single Movie User Flows', () => {
       .should('include', '694919')
       .get('h2')
       .contains(
-        'Sorry, we burnt the popcorn! Try again later!'
+        'Sorry, we burnt the popcorn!'
       );
   });
 
@@ -111,7 +111,7 @@ describe('Single Movie User Flows', () => {
       .should('include', '694919')
       .get('h2')
       .contains(
-        'Sorry, we burnt the popcorn! Try again later!'
+        'Sorry, we burnt the popcorn!'
       );
   });
 

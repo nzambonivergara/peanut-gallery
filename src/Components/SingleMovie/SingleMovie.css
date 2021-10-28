@@ -1,75 +1,40 @@
-.movie-title {
-  font-family: TiemposHeadlineWeb-Bold, Georgia, serif;
-  font-size: 48px;
-  font-weight: 400;
+.single-movie-container {
   color: white;
-}
-
-h3 {
-  margin-left: 12px;
+  font-size: 18px;
+  display: flex;
 }
 
 .poster-rating-styling {
   margin-left: 60px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.single-movie-container {
-  color: white;
-  font-size: 18px;
-  background-color: black;
-  display: flex;
-  flex-direction: row;
+.single-movie-poster {
+  width: 400px;
+  margin-left: 100px;
+  z-index: 1;
+}
+
+.movie-details {
+  margin-left: 50px;
+  margin-top: 20px;
+  z-index: 1;
 }
 
 .movie-title-styling {
   display: flex;
   align-items: baseline;
-  flex-direction: row;
-  justify-content: flex-start;
 }
 
-.single-movie-poster {
-  z-index: 1;
-  border-radius: 0%;
-  width: 400px;
-  height: 550px;
-  margin-left: 100px;
+.movie-title {
+  color: white;
+  font-family: TiemposHeadlineWeb-Bold, Georgia, serif;
+  font-size: 48px;
+  font-weight: 400;
 }
 
-.movie-details {
-  margin-top: 20px;
-  z-index: 1;
-  margin-left: 50px;
-}
-
-.overview {
-  font-size: 20px;
-  width: 500px;
-  margin-top: 50px;
-}
-
-.tagline {
-  text-transform: uppercase;
-  margin-top: 30px;
-  font-size: 18px;
-  font-weight: 20px;
-}
-
-.genre-container {
-  display: flex;
-}
-
-.movie-genre {
-  font-size: 19px;
-  background-color: #445566;
-  margin-top: 40px;
-  margin-right: 30px;
-  border-color: #445566;
-  border-radius: 3px;
-  padding: 7px;
+h3 {
+  margin-left: 12px;
 }
 
 .movie-rating {
@@ -77,13 +42,37 @@ h3 {
   margin-top: 10px;
 }
 
+.tagline {
+  text-transform: uppercase;
+  margin-top: 30px;
+}
+
+.overview {
+  font-size: 20px;
+  margin-top: 40px;
+  width: 700px;
+}
+
 .budget-revenue {
   margin-top: 20px;
+}
+
+.genre-container {
+  display: flex;
+}
+
+.genre {
+  font-size: 19px;
+  background-color: #445566;
+  border-radius: 3px;
+  margin-top: 40px;
+  margin-right: 30px;
+  padding: 7px;
 }
 
 .trailer-container {
   display: flex;
   justify-content: space-around;
-  padding-top: 100px;
   padding-bottom: 100px;
+  padding-top: 100px;
 }

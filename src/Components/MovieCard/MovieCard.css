@@ -1,35 +1,35 @@
 .movie-card {
-  box-sizing: border-box;
   color: white;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  position: relative;
   width: 250px;
   z-index: 1;
-  position:relative;
-  text-transform: uppercase;
 }
 
 .movie-card::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 10%;
   height: 100%;
+  left: 10%;
+  top: 0;
   width: 80%;
   border-bottom: 1px solid white;
+  position: absolute;
+  content: '';
 }
 
 .movie-card:hover {
-  transform: scale(1.1);
   cursor: pointer;
-}
-
-.card-details {
-  display: flex;
-  justify-content: space-between;
+  transform: scale(1.1);
 }
 
 .card-poster {
   width: 100%;
   object-fit: cover;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
 }
 
 .card-title {

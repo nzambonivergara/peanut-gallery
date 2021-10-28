@@ -41,7 +41,10 @@ class SingleMovie extends Component {
       <div>
         {this.state.singleMovie && (
           <>
-            <Header bannerImage={this.state.singleMovie.backdrop_path} clearFilteredMovies={this.props.clearFilteredMovies}/>
+            <Header
+              bannerImage={this.state.singleMovie.backdrop_path}
+              clearFilteredMovies={this.props.clearFilteredMovies}
+            />
             <section className="single-movie-container">
               <div className="poster-rating-styling">
                 <img
@@ -52,7 +55,9 @@ class SingleMovie extends Component {
               </div>
               <div className="movie-details">
                 <div className="movie-title-styling">
-                  <h2 className="movie-title">{this.state.singleMovie.title}</h2>
+                  <h2 className="movie-title">
+                    {this.state.singleMovie.title}
+                  </h2>
                   <h3>
                     {this.state.singleMovie.release_date} •{' '}
                     {this.state.singleMovie.runtime}mins
@@ -70,7 +75,7 @@ class SingleMovie extends Component {
                 </p>
                 <div className="genre-container">
                   {this.state.singleMovie.genres.map((genre) => (
-                    <p className="movie-genre" key={genre}>
+                    <p className="genre" key={genre}>
                       {genre}
                     </p>
                   ))}

@@ -94,7 +94,7 @@ describe('Home View', () => {
     })
 
     cy.visit('http://localhost:3000')
-      .get('h2').contains('Sorry, we burnt the popcorn! Try again later!')
+      .get('h2').contains('Sorry, we burnt the popcorn!')
   });
 
   it('Should display an error message if the movies request fails', () => {
@@ -106,6 +106,6 @@ describe('Home View', () => {
     })
 
     cy.visit('http://localhost:3000')
-      .get('h2').contains('Sorry, we burnt the popcorn! Try again later!')
+      .get('h2').contains('Sorry, we burnt the popcorn!')
   });
 })

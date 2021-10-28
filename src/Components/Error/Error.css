@@ -1,7 +1,18 @@
-.error-message {
+.error-message-container {
   text-align: center;
+  line-height: 100px;
+}
+
+.error-message {
   font-size: 32px;
-  position: fixed;
-  left: 200px;
   color: white;
+}
+
+.error-message-link {
+  font-size: 32px;
+  color: white;
+}
+
+.error-message-link:hover {
+  text-decoration: underline;
 }

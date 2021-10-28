@@ -6,23 +6,10 @@
 
 Roasted Popcorn is a React built application where the user can browse movies, search movies by title, and view more details about each movie, including, but not limited to, an overview, release date, revenue, and trailer. 
 
-## Snapshots of Application
+## Snapshot of Application
 
-**Home View:**
+![roastedpopcorn giphy](https://user-images.githubusercontent.com/81186709/139347459-9086ea2f-f4a4-4f8a-9d3e-e4bed1308470.gif)
 
-![recording (11)](https://user-images.githubusercontent.com/83611094/138778337-032c1a88-5bb0-45e9-b09a-b12a83d00136.gif)
-
-**Live Search Functionality:** 
-
-![recording (12)](https://user-images.githubusercontent.com/83611094/138778683-74331a43-f5e1-4514-98ca-c2f470cfab47.gif)
-
-**Single Movie View:**
-
-![recording (8)](https://user-images.githubusercontent.com/83611094/138777363-bf427ae1-135c-4f7d-97dc-eb9af21e93c3.gif)
-
-**Sing In View:**
-
-![recording (14)](https://user-images.githubusercontent.com/83611094/138778786-48c2ab25-8d1a-4706-ad26-f917a7d99202.gif)
 
 1. From the home view, the user can:
     - view all movies. 

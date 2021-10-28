@@ -8,7 +8,8 @@ Roasted Popcorn is a React built application where the user can browse movies, s
 
 ## Snapshot of Application
 
-![popcorngiphy 3](https://user-images.githubusercontent.com/81186709/139348840-e12e17c0-d44c-4bba-991b-d41b2368e833.gif)
+![popcorn giphy 4](https://user-images.githubusercontent.com/81186709/139349542-1619f773-6367-4f21-a20f-ed00015ee506.gif)
+
 
 
 

@@ -11,7 +11,7 @@ const Header = ({ bannerImage, clearFilteredMovies }) => {
       </div>
       <div className="title-container">
         <h1 className="title">
-          The <span>P🍿pcorn</span> Gallery
+          Roasted <span>P🍿pcorn</span>
         </h1>
       </div>
       <NavLink
@@ -21,7 +21,7 @@ const Header = ({ bannerImage, clearFilteredMovies }) => {
         onClick={clearFilteredMovies}
       >
         ALL MOVIES
-      </NavLink>  
+      </NavLink>
     </header>
   );
 };

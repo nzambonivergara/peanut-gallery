@@ -4,7 +4,7 @@ import './Error.css';
 const Error = () => {
   return (
     <h2 className="error-message">
-      Sorry, no comments from the popcorn gallery! Try again later!
+      Sorry, we burnt the popcorn! Try again later!
     </h2>
   );
 };

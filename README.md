@@ -81,7 +81,7 @@ This project was developed by:
 - [Raquel Hill](https://github.com/Raquelhill)
 - [Natalia Zamboni Vergara](https://github.com/nzambonivergara)
 
-- [Project Spec](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html) provided by the Turing School of Software & Design.
+[Project Spec](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html) provided by the Turing School of Software & Design.
 
 *Raquel and Natalia are students of front-end engineering at the Turing School of Software & Design.*
 ---

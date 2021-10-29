@@ -4,19 +4,10 @@
 <a href="https://roasted-popcorn-mod3.surge.sh/">View Deployed Site Here</a>
 </div>
 
-# Roasted Popcorn
-
-- [Project Spec](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html) provided by the Turing School of Software & Design.
-
-## Abstract
-
-Roasted Popcorn is a React built application where the user can browse movies, search movies by title, and view more details about each movie, including, but not limited to, an overview, release date, revenue, and trailer. 
 
 ## Snapshot of Application
 
 ![popcorn giphy 4](https://user-images.githubusercontent.com/81186709/139349542-1619f773-6367-4f21-a20f-ed00015ee506.gif)
-
-
 
 
 
@@ -25,12 +16,11 @@ Roasted Popcorn is a React built application where the user can browse movies, s
     - a loading page will display first if the data needs time to load.
     - search movies by title.
     - choose to select a single movie to see more details about that movie.
-    - choose to sign in.
 2. From the single movie view, the user can:
     - view selected movie details.
     - view the movie's trailer.
     - return to the home view.
-4. When the user clicks the sign in button, the user can enter their email and password. When they submit, it takes them to the home page. There is no authentication process as this view was built for the functionality to be completed in a future iteration.
+4. When the user clicks the sign in button, the user can enter their email and password. When they submit, it takes them to the home page.
 
 
 ## Technologies
@@ -60,20 +50,6 @@ Roasted Popcorn is a React built application where the user can browse movies, s
     </tr>
 </table>
 
-## Install/ Set Up Instructions
-
-1. Clone down this repository.
-  ```
-  git clone git@github.com:nzambonivergara/popcorn-gallery.git
-  ```
-2. In your terminal, run:
-  ```
-  npm install
-  npm start
-  ```
-3. Enter the following url in your browser: http://localhost:3000/
-4. Explore the website.
-
 ## Wins
 
 - Successfully utilizing React from the planning process to implementing contolled forms
@@ -96,7 +72,7 @@ Roasted Popcorn is a React built application where the user can browse movies, s
 
 ## Future Features
 
-- Complete the sign in functionality through building an Express back end server
+- Sign in functionality through building an Express back end server
 - Allow users to submit ratings and save movies to their favorites
 - Add filtering functionality to search by genre
 
@@ -106,6 +82,8 @@ This project was developed by:
 
 - [Raquel Hill](https://github.com/Raquelhill)
 - [Natalia Zamboni Vergara](https://github.com/nzambonivergara)
+
+- [Project Spec](https://frontend.turing.edu/projects/module-3/rancid-tomatillos-v3.html) provided by the Turing School of Software & Design.
 
 *Raquel and Natalia are students of front-end engineering at the Turing School of Software & Design.*
 ---

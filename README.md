@@ -59,7 +59,7 @@
 - Creating appropriate error handling and displaying error and loading messages to the user
 - Using Figma to outline high level project aesthetic and functionality
 - Using Github Project Board to plan our project
-- Collaborating with team mates to tackle complicated tasks and trying various approaches
+- Collaborating with teammates to tackle complicated tasks and trying various approaches
 - Making our application meet accessibility principles  
 - Utilizing resources such as web documents and mentors to expand knowledge base and maximize application display and performance
 

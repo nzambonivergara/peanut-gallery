@@ -1,6 +1,6 @@
 <div align="center">
 <h1>Roasted P🍿pcorn</h1>
-<p>A React built application where the user can browse movies, search movies by title, and view more details about each movie.</p>
+<p>A React built application where the user can browse movies, search movies by title, and view specific details about each movie.</p>
 <a href="https://roasted-popcorn-mod3.surge.sh/">View Deployed Site Here</a>
 </div>
 
@@ -13,15 +13,13 @@
 
 1. From the home view, the user can:
     - view all movies. 
-    - a loading page will display first if the data needs time to load.
     - search movies by title.
     - choose to select a single movie to see more details about that movie.
+    - a loading page will display first if the data needs time to load.
 2. From the single movie view, the user can:
     - view selected movie details.
     - view the movie's trailer.
     - return to the home view.
-4. When the user clicks the sign in button, the user can enter their email and password. When they submit, it takes them to the home page.
-
 
 ## Technologies
 
